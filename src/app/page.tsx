@@ -1,3 +1,11 @@
+import Header from "@/components/header";
+
+
 export default function Homepage() {
-    return <p>Homepage</p>
+    
+    return (
+        <>
+            <Header label="Home" />
+        </>
+    )
 }

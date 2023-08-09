@@ -1,10 +1,11 @@
+// These styles apply to every route in the application
+import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/context/theme-provider'
-// These styles apply to every route in the application
-import '../styles/globals.css'
 import NavMenu from '@/components/nav-menu'
 import Sidebar from '@/components/sidebar'
+import FollowBar from '@/components/follow-bar'
 
 const inter = Inter({ subsets: ['latin'] }) 
 
@@ -35,7 +36,8 @@ export default function RootLayout({
               border-neutral-800
               '>
                 {children}
-              </div>              
+              </div>
+              <FollowBar />
             </div>
             
           </div>
