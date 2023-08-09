@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
  
 // These styles apply to every route in the application
-import './globals.css'
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Next.js',
