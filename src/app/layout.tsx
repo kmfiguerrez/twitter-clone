@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
- 
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@/context/theme-provider'
 // These styles apply to every route in the application
 import '../styles/globals.css'
+
+const inter = Inter({ subsets: ['latin'] }) 
 
 export const metadata: Metadata = {
   title: 'Next.js',
@@ -14,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-      <div className="container mx-auto px-4">
-        {children}
-      </div>        
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
