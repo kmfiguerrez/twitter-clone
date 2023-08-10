@@ -3,9 +3,10 @@ import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/context/theme-provider'
-import NavMenu from '@/components/nav-menu'
-import Sidebar from '@/components/sidebar'
+import NavMenu from '@/components/nav/nav-menu'
+import Sidebar from '@/components/sidebar/sidebar'
 import FollowBar from '@/components/follow-bar'
+import Modal from '@/components/modal/modal'
 
 const inter = Inter({ subsets: ['latin'] }) 
 
@@ -23,6 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+
+        <Modal isOpen={true} title='bitch!' actionLabel='submit'></Modal>
+
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="container h-screen border border-blue-500">
             <NavMenu></NavMenu>

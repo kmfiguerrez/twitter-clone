@@ -10,7 +10,7 @@ import {
     NavigationMenuTrigger,
     NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
-import { ModeToggle } from "./theme-button"
+import { ModeToggle } from "./nav-theme-button"
   
 
 export default function NavMenu() {
